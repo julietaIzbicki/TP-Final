@@ -15,17 +15,16 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        /*
-            ViewBag.Aros = BD.ObtenerAros();
-            ViewBag.Lugares = BD.ObtenerLugares();
-        */
+        
+        ViewBag.Aros = BD.ListarPiercings();
+        ViewBag.Lugares = BD.ListarNegocios();
         return View();
     }
 
     public IActionResult Catalogo()
     {
         /*
-            
+
         */
         return View();
     }

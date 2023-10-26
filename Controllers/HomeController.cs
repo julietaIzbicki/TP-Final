@@ -15,7 +15,6 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        
         ViewBag.Aros = BD.ListarPiercings();
         ViewBag.Lugares = BD.ListarNegocios();
         return View();

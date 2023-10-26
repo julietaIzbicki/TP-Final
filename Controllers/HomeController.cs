@@ -15,10 +15,27 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        /*
+            ViewBag.Aros = BD.ObtenerAros();
+            ViewBag.Lugares = BD.ObtenerLugares();
+        */
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Catalogo()
+    {
+        /*
+            
+        */
+        return View();
+    }
+    
+    public IActionResult Reserva()
+    {
+        return View();
+    }
+
+    public IActionResult Contacto()
     {
         return View();
     }

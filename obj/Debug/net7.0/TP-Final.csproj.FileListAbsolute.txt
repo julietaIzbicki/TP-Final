@@ -67,3 +67,9 @@ C:\Users\47350196\Desktop\TP-Final\obj\Debug\net7.0\ref\TP-Final.dll
 C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\Dapper.dll
 C:\Users\47697893\Downloads\TP-Final\obj\Debug\net7.0\TP-Final.csproj.CopyComplete
 >>>>>>> 917e7fd844012bc1b0b15e852025a83aa9dc0cda
+C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

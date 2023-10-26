@@ -17,13 +17,6 @@ public class BD{
         }
     }
 
-    public static List<Negocio> ListarNegocios(){
-        string sql = "SELECT * FROM Negocio";
-        using(SqlConnection db = new SqlConnection(_connectionString)){
-            return db.Query<Negocio>(sql).ToList();
-        }
-    }
-
 //devuelve un objeto solo 
      public static Piercing InfoPiercing(int id){
         Piercing pi = new Piercing();

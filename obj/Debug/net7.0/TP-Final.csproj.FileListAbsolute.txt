@@ -29,3 +29,5 @@ C:\Users\47697893\Downloads\TP-Final\obj\Debug\net7.0\refint\TP-Final.dll
 C:\Users\47697893\Downloads\TP-Final\obj\Debug\net7.0\TP-Final.pdb
 C:\Users\47697893\Downloads\TP-Final\obj\Debug\net7.0\TP-Final.genruntimeconfig.cache
 C:\Users\47697893\Downloads\TP-Final\obj\Debug\net7.0\ref\TP-Final.dll
+C:\Users\47697893\Downloads\TP-Final\bin\Debug\net7.0\Dapper.dll
+C:\Users\47697893\Downloads\TP-Final\obj\Debug\net7.0\TP-Final.csproj.CopyComplete

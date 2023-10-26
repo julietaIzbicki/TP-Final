@@ -21,11 +21,16 @@ body {
   margin-bottom: 60px;
 }
 
+.centrar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .form-container {
   width: 400px;
-  background: linear-gradient(#212121, #212121) padding-box,
-              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
   font-size: 14px;

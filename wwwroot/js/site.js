@@ -8,9 +8,10 @@
 
         success: function(Eliminar) {
             console.log(Eliminar);
-            const inf = "hola"
+            /*const inf = "hola"
             $("#modalTittle").html("Mas informacion de la serie");
             $("#texto_informacion").html(inf);
+            */
         }
     });
 }

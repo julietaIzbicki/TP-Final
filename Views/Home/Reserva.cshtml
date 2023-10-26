@@ -2,9 +2,8 @@
     ViewData["Title"] = "Reserva Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-</div>
+<div class="text-center centrar">
+    <h1 class="display-4">¡Reserva tu turno!</h1>
 
 <div class="form-container">
       <form class="form">
@@ -41,18 +40,18 @@
         <button class="form-submit-btn" type="submit" data-bs-toggle="modal" data-bs-target="#informacion">Submit</button>
       </form>
 </div>
-
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="informacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalTittle"></h1>
+        <h1 class="modal-title fs-5" id="modalTittle">Tu reserva fue confirmada</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="texto_informacion" class="modal-body">
-        
+        <p></p>
       </div>
       <div class="modal-footer">
         <button type="button" onclick="EliminarReserva()" class="btn btn-secondary" data-bs-dismiss="modal">Eliminar Reserva</button>

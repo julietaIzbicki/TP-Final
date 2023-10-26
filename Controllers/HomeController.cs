@@ -22,16 +22,33 @@ public class HomeController : Controller
 
     public IActionResult Catalogo()
     {
-        /*
+        ViewBag.Aros = BD.ListarPiercings();
+        return View();
+    }
 
-        */
+    public IActionResult Piercing(int id)
+    {
+        ViewBag.UnAro = BD.InfoPiercing(id);
         return View();
     }
     
+    public IActionResult Lugar(int id)
+    {
+        ViewBag.UnLugar = BD.InfoSede(id);
+        return View();
+    }
+    
+    //[HttpPost]
     public IActionResult Reserva()
     {
         return View();
     }
+
+    public IActionResult EliminarReserva()
+    {
+        return View();
+    }
+
 
     public IActionResult Contacto()
     {

@@ -4,5 +4,60 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="form-container">
+      <form class="form">
+        <div class="form-group">
+          <div class="input-box">
+            <label>Nombre</label>
+            <input required="" placeholder="Enter full name" type="text">
+        </div>
+        <div class="input-box">
+            <label>Apellido</label>
+            <input required="" placeholder="Enter full name" type="text">
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Numero de telefono</label>
+            <input required="" placeholder="Enter phone number" type="telephone">
+          </div>
+          <div class="input-box">
+            <label>Fecha de reserva</label>
+            <input required="" placeholder="Enter birth date" type="date">
+          </div>
+          <div class="select-box">
+          <label>Elegí un aro</label>
+            <select>
+              <option hidden="">Seleccionar</option>
+              <option>Helix</option>
+              <option>Conch</option>
+              <option>Lobulo</option>
+              <option>Septum</option>
+              <option>Navel</option>
+            </select>
+          </div>
+      </div>
+        <button class="form-submit-btn" type="submit" data-bs-toggle="modal" data-bs-target="#informacion">Submit</button>
+      </form>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="informacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalTittle"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="texto_informacion" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="EliminarReserva()" class="btn btn-secondary" data-bs-dismiss="modal">Eliminar Reserva</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+      </div>
+    </div>
+  </div>
 </div>

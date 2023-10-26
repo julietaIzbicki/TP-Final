@@ -1,4 +1,17 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function EliminarReserva(id)
+{
+    $.ajax({
+        url: '/Home/EliminarReserva',
+        type : 'GET',
+        data: {id},
+        dataType: 'json',
 
-// Write your JavaScript code.
+        success: function(Eliminar) {
+            console.log(Eliminar);
+            const inf = "hola"
+            $("#modalTittle").html("Mas informacion de la serie");
+            $("#texto_informacion").html(inf);
+        }
+    });
+}
+

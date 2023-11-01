@@ -18,8 +18,12 @@
         </div>
         <div class="column">
           <div class="input-box">
-            <label>Numero de telefono</label>
-            <input required="" placeholder="Enter phone number" type="telephone" id="numero" name="numero">
+            <label>Mail</label>
+            <input required="" placeholder="Enter mail" type="text" id="Mail" name="Mail">
+          </div>
+          <div class="input-box">
+            <label>Edad</label>
+            <input required="" placeholder="Enter edad" type="number" id="Edad" name="Edad">
           </div>
           <div class="input-box">
             <label>Fecha de reserva</label>
@@ -27,11 +31,21 @@
           </div>
           <div class="select-box">
           <label>Elegí un aro</label>
-            <select>
+            <select name="Aro">
               <option hidden="">Seleccionar</option>
               @foreach(Piercing p in ViewBag.Aros)
               {
-                <option id="@p.IdPiercing" name="Aro">@p.Nombre</option>
+                <option id="@p.IdPiercing" >@p.Nombre</option>
+              } 
+            </select>
+          </div>
+          <div class="select-box">
+          <label>Elegí la sede</label>
+            <select name="Negocio">
+              <option hidden="">Seleccionar</option>
+              @foreach(Negocio n in ViewBag.Lugares)
+              {
+                <option id="@n.IdNegocio" >@n.Nombre</option>
               } 
             </select>
           </div>

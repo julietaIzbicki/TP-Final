@@ -38,11 +38,17 @@ public class HomeController : Controller
         return View();
     }
     
-    //[HttpPost]
     public IActionResult Reserva()
     {
         ViewBag.Aros = BD.ListarPiercings();
+        ViewBag.Lugares = BD.ListarNegocios();
         return View();
+    }
+
+    public IActionResult AgregarReserva(string Nombre, string Apellido, string Mail, int Edad, DateTime Fecha,  int IdPiercing, int IdNegocio)
+    {
+        BD.GuardarReserva(new Reserva (Nombre, Apellido, Mail, Edad, Fecha, IdPiercing, IdNegocio));
+        return RedirectToAction("Index", "Home");
     }
 
     public IActionResult EliminarReserva()

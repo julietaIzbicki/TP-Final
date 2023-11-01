@@ -36,13 +36,13 @@ public class BD{
         return sede;
     }
 //insert reserva en bd y return idreserva
-    public static int GuardarReserva(Reserva R){
-        string SQL = "INSERT INTO  Reservas (IdReserva, Nombre, Apellido, Mail, Edad, IdPiercing, IdNegocio, Fecha) VALUES (@pIdReserva, @pNombre, @pApellido, @pMail, @pEdad, @pIdPiercing, @pIdNegocio, @pFecha)";
+    public static void GuardarReserva(Reserva R){
+        string SQL = "INSERT INTO  Reservas (Nombre, Apellido, Mail, Edad, IdPiercing, IdNegocio, Fecha) VALUES (@pNombre, @pApellido, @pMail, @pEdad, @pIdPiercing, @pIdNegocio, @pFecha)";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            db.Execute(SQL, new {pIdReserva=R.IdReserva, pNombre=R.Nombre, pApellido=R.Apellido, pMail=R.Mail, pEdad=R.Edad, pIdPiercing=R.IdPiercing, pIdNegocio=R.IdNegocio, pFecha=R.Fecha});
+            db.Execute(SQL, new {pNombre=R.Nombre, pApellido=R.Apellido, pMail=R.Mail, pEdad=R.Edad, pIdPiercing=R.IdPiercing, pIdNegocio=R.IdNegocio, pFecha=R.Fecha});
         }
-        return R.IdReserva;
+        // return R.IdReserva;
     }
 
 //usamo storedprocedures :)

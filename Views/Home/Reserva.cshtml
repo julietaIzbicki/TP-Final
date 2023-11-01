@@ -6,38 +6,37 @@
     <h1 class="display-4">¡Reserva tu turno!</h1>
 
 <div class="form-container">
-      <form class="form">
+      <form class="form" id="formulario">
         <div class="form-group">
           <div class="input-box">
             <label>Nombre</label>
-            <input required="" placeholder="Enter full name" type="text">
+            <input required="" placeholder="Enter full name" type="text" id="Nombre" name="Nombre">
         </div>
         <div class="input-box">
             <label>Apellido</label>
-            <input required="" placeholder="Enter full name" type="text">
+            <input required="" placeholder="Enter full name" type="text" id="Apellido" name="Apellido">
         </div>
         <div class="column">
           <div class="input-box">
             <label>Numero de telefono</label>
-            <input required="" placeholder="Enter phone number" type="telephone">
+            <input required="" placeholder="Enter phone number" type="telephone" id="numero" name="numero">
           </div>
           <div class="input-box">
             <label>Fecha de reserva</label>
-            <input required="" placeholder="Enter birth date" type="date">
+            <input required="" placeholder="Enter birth date" type="date" id="Fecha" name="Fecha">
           </div>
           <div class="select-box">
           <label>Elegí un aro</label>
             <select>
               <option hidden="">Seleccionar</option>
-              <option>Helix</option>
-              <option>Conch</option>
-              <option>Lobulo</option>
-              <option>Septum</option>
-              <option>Navel</option>
+              @foreach(Piercing p in ViewBag.Aros)
+              {
+                <option id="@p.IdPiercing" name="Aro">@p.Nombre</option>
+              } 
             </select>
           </div>
       </div>
-        <button class="form-submit-btn" type="submit" data-bs-toggle="modal" data-bs-target="#informacion">Submit</button>
+        <button class="form-submit-btn" type="button" onclick="EnviarFormulario()">Submit</button>
       </form>
 </div>
 </div>

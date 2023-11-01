@@ -16,3 +16,23 @@
     });
 }
 
+
+function EnviarFormulario()
+{
+    alert($("#formulario").serialize());
+    $.ajax({
+        url: '/Home/AgregarReserva',
+        type : 'GET',
+        data: $("#formulario").serialize(),
+        dataType: 'json',
+
+        success: function(Eliminar) {
+            console.log(Eliminar);
+            /*const inf = "hola"
+            $("#modalTittle").html("Mas informacion de la serie");
+            $("#texto_informacion").html(inf);
+            */
+        }
+    });
+
+}

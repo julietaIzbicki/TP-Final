@@ -41,6 +41,7 @@ public class HomeController : Controller
     //[HttpPost]
     public IActionResult Reserva()
     {
+        ViewBag.Aros = BD.ListarPiercings();
         return View();
     }
 

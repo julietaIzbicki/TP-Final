@@ -20,4 +20,14 @@ public class Reserva{
         IdNegocio=idNegocio;
         Fecha=fecha;
     }
+
+    public Reserva(string nombre, string apellido, string mail, int edad, int idPiercing, int idNegocio, DateTime fecha){
+        Nombre=nombre;
+        Apellido=apellido;
+        Mail=mail;
+        Edad=edad;
+        IdPiercing=idPiercing;
+        IdNegocio=idNegocio;
+        Fecha=fecha;
+    }
 }

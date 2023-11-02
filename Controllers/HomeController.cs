@@ -45,9 +45,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult AgregarReserva(string Nombre, string Apellido, string Mail, int Edad, DateTime Fecha,  int IdPiercing, int IdNegocio)
+    public IActionResult AgregarReserva(string Nombre, string Apellido, string Mail, int Edad,  int Aro, int Negocio, DateTime Fecha)
     {
-        // BD.GuardarReserva(new Reserva(Nombre, Apellido, Mail, Edad, Fecha, IdPiercing, IdNegocio));
+        BD.GuardarReserva(new Reserva(Nombre, Apellido, Mail, Edad, Aro, Negocio, Fecha));
         return RedirectToAction("Index", "Home");
     }
 

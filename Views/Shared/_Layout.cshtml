@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TP_Final</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TP_Final.styles.css" asp-append-version="true" />
+        <link rel="icon" href="Imagenes/logo.png" type="image/png">
 </head>
 <body>
     <header>
@@ -47,23 +48,23 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted">
         <div class="container">
-             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+             <div class="footer-contenedor">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li>
                             <img class="logo" src="/imagenes/logo.png" alt="logo">
                         </li>
-                        <li class="nav-item">
+                        <li>
                             Copyright © 2023 ORT Argentina
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Reserva">Reserva</a>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Reserva">Reserva</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
                         </li>
-                        <li class="nav-item">
+                        <li>
                             <a href="https://www.instagram.com/infoc.xxiv/">Instagram</a>
                         </li>
                     </ul>

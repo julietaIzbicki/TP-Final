@@ -11,16 +11,27 @@
     <p>
         Adorn-Me es una empresa joven, pero con una gran pasión por el piercing. Estamos comprometidos a ofrecer a nuestros clientes la mejor experiencia posible, y estamos seguros de que podemos convertirnos en la empresa de piercings líder en el mercado.
     </p>
-    <h2>Horarios</h2>
-    <ul>
-        <li>Martes a viernes: 9:00 a 23:30</li>
-        <li>Sábados y domingos: 10:00 a 16:15</li>
-   </ul>
-    <h2>Localidad</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.769640147658!2d-58.43171722336081!3d-34.609986157830924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca680b697a73%3A0xb6fa8d39f7cf0dc9!2sEscuela%20ORT%20sede%20Almagro!5e0!3m2!1ses!2sar!4v1698943579527!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2>Nuestras sedes</h2>
+     @{
+                    foreach(Negocio sede in @ViewBag.Lugares){
+                       <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">@sede.Nombre</h5>
+                                <p class="card-text">@sede.Direccion</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                        }
+                        }
+        
     <h2>¡Contactanos!</h2>
     <ul>
         <li>Telefono: HAY QUE PONERLO DE LA BASE DE DATOS</li>
+        <li>Sábados y domingos: 10:00 a 16:15</li>
+   </ul>    
+   <h2>Horarios</h2>
+    <ul>
+        <li>Martes a viernes: 9:00 a 23:30</li>
         <li>Sábados y domingos: 10:00 a 16:15</li>
    </ul>
     

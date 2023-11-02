@@ -4,14 +4,10 @@
         url: '/Home/EliminarReserva',
         type : 'GET',
         data: {id},
-        dataType: 'json',
+        dataType: 'int',
 
         success: function(Eliminar) {
-            console.log(Eliminar);
-            /*const inf = "hola"
-            $("#modalTittle").html("Mas informacion de la serie");
-            $("#texto_informacion").html(inf);
-            */
+            $("#texto_informacion").html("hola");  
         }
     });
 }
@@ -24,12 +20,12 @@ function EnviarFormulario()
         type : 'GET',
         data: $("#formulario").serialize(),
         dataType: 'json',    
-        
-        success: function(Confirmar) {
-            console.log('**************************************************************')
-            console.log('("#formulario").serialize()');
-            alert($("#formulario").serialize());            
+        success: function(confirmar) {             
+            /// $("#texto_informacion").html($("#formulario").serialize());    
+            /// mostrar el resultado del form lindo      
         }
     });
 
 }
+
+

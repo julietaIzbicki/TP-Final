@@ -45,15 +45,15 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult AgregarReserva(string Nombre, string Apellido, string Mail, int Edad,  int Aro, int Negocio, DateTime Fecha)
+    public Reserva AgregarReserva(string Nombre, string Apellido, string Mail, int Edad,  int Aro, int Negocio, DateTime Fecha)
     {
-        BD.GuardarReserva(new Reserva(Nombre, Apellido, Mail, Edad, Aro, Negocio, Fecha));
-        return RedirectToAction("Index", "Home");
+        return BD.GuardarReserva(new Reserva(Nombre, Apellido, Mail, Edad, Aro, Negocio, Fecha));
     }
 
-    public IActionResult EliminarReserva()
+    public int EliminarReserva(int id)
     {
-        return View();
+        BD.ElmiminarReserva(id);
+        return 0;
     }
 
 

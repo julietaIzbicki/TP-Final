@@ -31,7 +31,7 @@
               <option hidden="">Seleccionar</option>
               @foreach(Piercing p in ViewBag.Aros)
               {
-                <option id="@p.IdPiercing" >@p.Nombre</option>
+                <option value="@p.IdPiercing" >@p.Nombre</option>
               } 
             </select>
           </div>
@@ -41,7 +41,7 @@
               <option hidden="">Seleccionar</option>
               @foreach(Negocio n in ViewBag.Lugares)
               {
-                <option id="@n.IdNegocio" >@n.Nombre</option>
+                <option value="@n.IdNegocio" >@n.Nombre</option>
               } 
             </select>
           </div>

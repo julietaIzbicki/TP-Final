@@ -24,7 +24,9 @@ function EnviarFormulario()
         type : 'GET',
         data: $("#formulario").serialize(),
         dataType: 'json',    
+        
         success: function(Confirmar) {
+            console.log('**************************************************************')
             console.log('("#formulario").serialize()');
             alert($("#formulario").serialize());            
         }

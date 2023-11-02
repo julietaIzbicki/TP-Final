@@ -21,13 +21,13 @@ public class Reserva{
         Fecha=fecha;
     }
 
-    public Reserva(string nombre, string apellido, string mail, int edad, int idPiercing, int idNegocio, DateTime fecha){
+    public Reserva(string nombre, string apellido, string mail, int edad, int idpiercing, int idnegocio, DateTime fecha){
         Nombre=nombre;
         Apellido=apellido;
         Mail=mail;
         Edad=edad;
-        IdPiercing=idPiercing;
-        IdNegocio=idNegocio;
+        IdPiercing=idpiercing;
+        IdNegocio=idnegocio;
         Fecha=fecha;
     }
 }

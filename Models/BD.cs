@@ -17,6 +17,20 @@ public class BD{
         }
     }
 
+       public static List<Piercing> ListarDeAcero(){
+        string sql = "SELECT * FROM Piercing WHERE Material='Acero'";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            return db.Query<Piercing>(sql).ToList();
+        }
+    }
+       public static List<Piercing> ListarDeTitanio(){
+        string sql = "SELECT * FROM Piercing WHERE Material='Titanio'";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            return db.Query<Piercing>(sql).ToList();
+        }
+    }
+//hay que pasar estos en controllers
+
 //devuelve un objeto solo 
      public static Piercing InfoPiercing(int id){
         Piercing pi = new Piercing();

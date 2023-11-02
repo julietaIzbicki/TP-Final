@@ -1,5 +1,6 @@
 header, footer{
   background-color: black;
+  padding: 20px;
 }
 
 html {
@@ -23,7 +24,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: #212121;
+  background-color: #000000;
 }
 
 .centrar{
@@ -147,52 +148,43 @@ body {
   width: 45px;
 }
 
-@media (max-width: 767px) {
-  .carousel-inner .carousel-item > div {
-      display: none;
-  }
-  .carousel-inner .carousel-item > div:first-child {
-      display: block;
-  }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-}
-
-/* medium and up screens */
-@media (min-width: 768px) {
-  
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
-    transform: translateX(25%);
-  }
-  
-  .carousel-inner .carousel-item-start.active, 
-  .carousel-inner .carousel-item-prev {
-    transform: translateX(-25%);
-  }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-transform: translateX(0);
-}
-
 header li{
   padding-right: 15px;
 }
 
 header li a{
   font-size: 26px;
-  color: #67679E;
+  color: #9696bb;
   text-decoration: none;
   margin: 10px;
+  display: flex;
   
 }
 
+.vinculo-header{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 1270px;
+}
+
 li a:hover{
-  color: #9292c6 ;
+  color: #c5c5dc ;
+}
+
+h1{
+  color: #c5c5dc;
+}
+
+p,h2,h3{
+  color: #d9d9ea;
+}
+
+.carrusel{
+  margin-left: 900px;
+  width: 350px;
+  height: auto;
+}
+
+.titulo-principal{
+  font-size: 100px;
 }

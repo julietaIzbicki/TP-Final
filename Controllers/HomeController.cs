@@ -47,7 +47,7 @@ public class HomeController : Controller
 
     public IActionResult AgregarReserva(string Nombre, string Apellido, string Mail, int Edad, DateTime Fecha,  int IdPiercing, int IdNegocio)
     {
-        BD.GuardarReserva(new Reserva (Nombre, Apellido, Mail, Edad, Fecha, IdPiercing, IdNegocio));
+        // BD.GuardarReserva(new Reserva(Nombre, Apellido, Mail, Edad, Fecha, IdPiercing, IdNegocio));
         return RedirectToAction("Index", "Home");
     }
 

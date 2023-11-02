@@ -59,6 +59,7 @@ public class HomeController : Controller
 
     public IActionResult Contacto()
     {
+        ViewBag.Lugares = BD.ListarNegocios();
         return View();
     }
 

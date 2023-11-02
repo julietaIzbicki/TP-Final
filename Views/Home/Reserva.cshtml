@@ -25,10 +25,6 @@
             <label>Edad</label>
             <input required="" placeholder="Enter edad" type="number" id="Edad" name="Edad">
           </div>
-          <div class="input-box">
-            <label>Fecha de reserva</label>
-            <input required="" placeholder="Enter birth date" type="date" id="Fecha" name="Fecha">
-          </div>
           <div class="select-box">
           <label>Elegí un aro</label>
             <select name="Aro">
@@ -48,6 +44,10 @@
                 <option id="@n.IdNegocio" >@n.Nombre</option>
               } 
             </select>
+          </div>
+          <div class="input-box">
+            <label>Fecha de reserva</label>
+            <input required="" type="date" id="Fecha" name="Fecha">
           </div>
       </div>
         <button class="form-submit-btn" type="button" onclick="EnviarFormulario()">Submit</button>

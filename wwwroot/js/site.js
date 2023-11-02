@@ -19,19 +19,14 @@
 
 function EnviarFormulario()
 {
-    // 
     $.ajax({
         url: '/Home/AgregarReserva',
         type : 'GET',
         data: $("#formulario").serialize(),
-        dataType: 'json',
-
+        dataType: 'json',    
         success: function(Confirmar) {
+            console.log('("#formulario").serialize()');
             alert($("#formulario").serialize());            
-            /*const inf = "hola"
-            $("#modalTittle").html("Mas informacion de la serie");
-            $("#texto_informacion").html(inf);
-            */
         }
     });
 

@@ -21,7 +21,7 @@ function EnviarFormulario()
         data: $("#formulario").serialize(),
         dataType: 'json',    
         success: function(confirmar) {             
-            /// $("#texto_informacion").html($("#formulario").serialize());    
+            $("#texto_informacion").html($("#formulario").serialize());    
             /// mostrar el resultado del form lindo      
         }
     });

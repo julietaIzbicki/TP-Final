@@ -1,14 +1,14 @@
-﻿function EliminarReserva(mail)
+﻿function EliminarReserva()
 {
+    mail=$("#Mail").val();
     $.ajax({
         url: '/Home/EliminarReserva',
         type : 'GET',
         data: {mail},
-        dataType: 'int',
-
+        
         success: function(Eliminar) {
-            $("#texto_informacion").html("hola");  
-            console.log(mail)
+        
+            window.location.href = '/Home/ReservaEliminada'        
         }
     });
 }
@@ -23,11 +23,17 @@ function EnviarFormulario()
         dataType: 'json',  
 
         success: function(confirmar) {             
-            $("#texto_informacion").html($("#formulario").serialize());    
-            /// mostrar el resultado del form lindo      
+            /// $("#texto_informacion").html($("#formulario").serialize());    
+            /// mostrar el resultado del form lindo
         }
     });
 
 }
 
+
+$(document).ready(function() {
+    $('#confirmarReservaBtn').click(function() {
+        window.location.href = '/Home/ReservaConfirmada';
+    });
+});
 

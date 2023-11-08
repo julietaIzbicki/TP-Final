@@ -66,6 +66,17 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult ReservaConfirmada()
+    {
+        
+        return View();
+    }
+
+    public IActionResult ReservaEliminada()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

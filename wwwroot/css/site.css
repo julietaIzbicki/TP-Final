@@ -312,6 +312,18 @@ body {
 
 .card-body-mio{
   padding: 30px;
-  background-color: #605863;
+  background-color: #2a012e;
   border: #232425;
+}
+
+.sobre-nosotros{
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.sobre-nosotros img {
+  height: 300px;
+  width: auto;
+  padding: 30px;
 }

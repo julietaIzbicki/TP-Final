@@ -7,7 +7,6 @@
         data: {mail},
         
         success: function(Eliminar) {
-        
             window.location.href = '/Home/ReservaEliminada'        
         }
     });
@@ -30,10 +29,8 @@ function EnviarFormulario()
 
 }
 
-
 $(document).ready(function() {
     $('#confirmarReservaBtn').click(function() {
         window.location.href = '/Home/ReservaConfirmada';
     });
 });
-

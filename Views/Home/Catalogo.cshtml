@@ -4,5 +4,22 @@
 
 <div class="text-center">
     <h1 class="display-4">¡Elegi tu aro ideal!</h1>
+
+
+    <div class="card-contenedores">
+     @{
+                    foreach(Piercing aro in @ViewBag.Aros){
+                        <div class="card-contenedor">
+                            <img src="@aro.Foto" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@aro.Nombre</h5>
+                            </div>
+                        </div>
+
+                        }
+                        }
+    </div>
+  </div>
+</div>
     
 </div>

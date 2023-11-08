@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
+  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
 header, footer{
   background-color: black;
   padding: 20px;
@@ -180,6 +183,8 @@ footer li a, footer li{
   width: fit-content;
 }
 
+
+
 .vinculo-header{
   display: flex;
   justify-content: flex-end;
@@ -196,14 +201,23 @@ h1{
 }
 
 p{
-  font-size: 22px;
+  font-size: 20px;
   color: #feefff;
-  font-family: 'Tilt Neon', sans-serif;
+  font-family:'Rubik', sans-serif;;
 }
 
 h2,h3,h4{
   color: #feeeff;
   font-family: 'Tilt Neon', sans-serif;
+}
+
+h4{
+  width: 800px; 
+  height: auto;
+  padding: 20px;
+  font-size: 20px;
+  color: #feefff;
+  font-family:'Rubik', sans-serif;;
 }
 
 .home-principal {
@@ -256,7 +270,8 @@ h2,h3,h4{
 }
 
 .boton-index{
-  margin-top: 40px;
+  margin: 20px;
+  margin-top: 20px;
   font-size: 20px;
   padding: 20px;
   background-color: #e81cff;
@@ -280,4 +295,23 @@ body {
   min-height: calc(100vh - 60px);
   display: flex;
   flex-wrap: wrap;
+}
+
+.card-contenedor{
+  width: 300px;
+  height: auto;
+  background-color: #000000;
+}
+
+.card-contenedores{
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+
+}
+
+.card-body-mio{
+  padding: 30px;
+  background-color: #605863;
+  border: #232425;
 }

@@ -320,12 +320,14 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px;
+  width: 1350px;
+  height: auto;
 }
 
 .sobre-nosotros img {
-  height: 300px;
+  height: 520px;
   width: auto;
-  padding: 30px;
+  padding: 60px;
 }
 
 .card {

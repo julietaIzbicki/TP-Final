@@ -3,8 +3,15 @@
 header, footer{
   background-color: black;
   padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  
 }
 
+footer{margin-top: auto;
+  margin-top: auto;
+  box-sizing: border-box;
+  width: 100%;}
 html {
   font-size: 14px;
 }
@@ -188,30 +195,47 @@ h1{
   font-family: 'Tilt Neon', sans-serif;
 }
 
-p,h2,h3{
+p{
+  font-size: 22px;
+  color: #feefff;
+  font-family: 'Tilt Neon', sans-serif;
+}
+
+h2,h3,h4{
   color: #f6ccfa;
   font-family: 'Tilt Neon', sans-serif;
 }
 
+.home-principal {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
 .carrusel{
-  margin-left: 900px;
   width: 350px;
   height: auto;
 }
 
 .titulo-principal{
   font-family: 'Tilt Neon', sans-serif;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 500;
   color:#fff;
-  text-shadow: 0 0 5px #e81cff, 0 0 25px #e81cff, 0 0 50px #e81cff, 0 0 100px #e81cff;
-  letter-spacing: 5px;
-
+  
+  display: flex;
+  flex-direction:row; 
 }
+
+.ante-titulo-sombra{
+  text-shadow: 0 0 5px #e81cff, 0 0 25px #e81cff, 0 0 50px #e81cff, 0 0 100px #e81cff;
+  margin-left: 20px;
+}
+
 
 .subtitulo-principal{
   font-family: 'Tilt Neon', sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 500;
   color:#fff;
   text-shadow: 0 0 5px #e81cff, 0 0 25px #e81cff, 0 0 50px #e81cff, 0 0 100px #e81cff;
@@ -220,7 +244,7 @@ p,h2,h3{
 
 .subsubtitulo-principal{
   font-family: 'Tilt Neon', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
   color:#f6ccfa;
   letter-spacing: 5px;
@@ -249,4 +273,12 @@ p,h2,h3{
   color: #fde3ff;
   font-family: 'Tilt Neon', sans-serif;
   border-radius: 20px;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #000000;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-wrap: wrap;
 }

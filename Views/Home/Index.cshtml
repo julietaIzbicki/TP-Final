@@ -1,38 +1,45 @@
 ﻿@{
     ViewData["Title"] = "Inicio";
 }
+<section class="home-principal">
+    <div class="datos">
+        <h4>Piercings</h4> 
+        <h1 class="titulo-principal"> 
+            Somos
+            <span class="ante-titulo-sombra">Adorn Me</span>
+        </h1>
 
-<h1 class="titulo-principal">Adorn Me</h1>
-<h1 class="subtitulo-principal">Piercings</h1>
-<h2 class="subsubtitulo-principal">Adorná tu vida wacha piola</h2>
-<button class="boton-index">Nuestro catálogo</button>
-
-<div class="carrusel">
-    <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                @{
-                    
-                    foreach (Piercing aros in @ViewBag.Aros)
-                    {
-                        
-                        <div class="carousel-item active">
-                            <img src="@aros.Foto" class="d-block w-100" alt="...">
-                        </div>
-                    }
-                }
-
-                
-                
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            </div>
+        <h2 class="subsubtitulo-principal">Adorná tu vida wacha piola</h2>
+        <button class="boton-index">Nuestro catálogo</button>
     </div>
-</div>
 
+    <div class="carrusel">
+        <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    @{
+                        string active="active";
+                        foreach (Piercing aros in @ViewBag.Aros)
+                        {
+                            
+                            <div class="carousel-item @active">
+                                <img src="@aros.Foto" class="d-block w-100" alt="...">
+                            </div>
+                            active=""; 
+                        }
+                    }
+
+                    
+                    
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+        </div>
+    </div>
+</section>

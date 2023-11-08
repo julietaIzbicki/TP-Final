@@ -47,12 +47,15 @@ public class HomeController : Controller
 
     public Reserva AgregarReserva(string Nombre, string Apellido, string Mail, int Edad,  int Aro, int Negocio, DateTime Fecha)
     {
-        return BD.GuardarReserva(new Reserva(Nombre, Apellido, Mail, Edad, Aro, Negocio, Fecha));
+        Reserva res = BD.GuardarReserva(new Reserva(Nombre, Apellido, Mail, Edad, Aro, Negocio, Fecha));
+        ViewBag.Reserva = res;
+        return res;
     }
 
-    public int EliminarReserva(int id)
+[HttpGet]
+    public int EliminarReserva(string mail)
     {
-        BD.ElmiminarReserva(id);
+        BD.ElmiminarReserva(mail);
         return 0;
     }
 

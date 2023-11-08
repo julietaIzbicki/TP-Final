@@ -63,13 +63,11 @@
         <h1 class="modal-title fs-5" id="modalTittle">Tu reserva fue confirmada</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <!--
       <div id="texto_informacion" class="modal-body">
         <p></p>
       </div>
-      -->
       <div class="modal-footer">
-        <button type="button" onclick="EliminarReserva(Reserva.IdReserva)" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#informacion">Eliminar Reserva</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#informacion" onclick="EliminarReserva('@ViewBag.Reserva.Mail')">Eliminar Reserva</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Confirmar Reserva</button>
       </div>
     </div>

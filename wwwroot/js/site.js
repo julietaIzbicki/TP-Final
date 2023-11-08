@@ -1,13 +1,14 @@
-﻿function EliminarReserva(id)
+﻿function EliminarReserva(mail)
 {
     $.ajax({
         url: '/Home/EliminarReserva',
         type : 'GET',
-        data: {id},
+        data: {mail},
         dataType: 'int',
 
         success: function(Eliminar) {
             $("#texto_informacion").html("hola");  
+            console.log(mail)
         }
     });
 }
@@ -19,7 +20,8 @@ function EnviarFormulario()
         url: '/Home/AgregarReserva',
         type : 'GET',
         data: $("#formulario").serialize(),
-        dataType: 'json',    
+        dataType: 'json',  
+
         success: function(confirmar) {             
             $("#texto_informacion").html($("#formulario").serialize());    
             /// mostrar el resultado del form lindo      

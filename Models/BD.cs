@@ -62,11 +62,12 @@ public class BD{
     }
 
 //usamo storedprocedures :)
-    public static void ElmiminarReserva(int Id){
-        string SQL = "EXEC SP_EliminarReserva @Id";
-        using(SqlConnection db = new SqlConnection(_connectionString))
+    public static void ElmiminarReserva(string mail) {
+        string SQL = "EXEC SP_EliminarReserva @mail";
+        using (SqlConnection db = new SqlConnection(_connectionString)) 
         {
-            db.Execute(SQL, new{Id});
+            db.Execute(SQL, new { mail });
         }
     }
+
 }

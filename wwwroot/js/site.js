@@ -44,8 +44,7 @@ function Likear(id)
         data: {id},
 
         success: function(like) {             
-            window.location.reload;
+            window.location.reload();
         }
     });
-
 }

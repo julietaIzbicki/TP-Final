@@ -206,7 +206,7 @@ p{
   font-family:'Rubik', sans-serif;;
 }
 
-h2,h3,h4{
+h2,h3,h4,h5{
   color: #feeeff;
   font-family: 'Tilt Neon', sans-serif;
 }
@@ -216,8 +216,11 @@ h4{
   height: auto;
   padding: 20px;
   font-size: 20px;
-  color: #feefff;
-  font-family:'Rubik', sans-serif;;
+}
+
+h5{
+  padding-bottom: 20px;
+  font-size: 24px;
 }
 
 .home-principal {
@@ -261,6 +264,7 @@ h4{
   font-size: 35px;
   font-weight: 500;
   letter-spacing: 5px;
+  padding-bottom: 40px;
 }
 
 .footer-contenedor ul{
@@ -278,15 +282,33 @@ h4{
   color: #fde3ff;
   font-family: 'Tilt Neon', sans-serif;
   border-radius: 20px;
+  text-decoration: none;
+  margin-top: 60px;
+}
+
+
+
+.boton{
+  margin: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 15px;
+  background-color: #e81cff;
+  color: #fde3ff;
+  font-family: 'Tilt Neon', sans-serif;
+  border-radius: 15px;
+  text-decoration: none;
 }
 
 .boton-index:hover{
-  font-size: 20px;
-  padding: 20px;
   background-color: #f091fa;
   color: #fde3ff;
-  font-family: 'Tilt Neon', sans-serif;
-  border-radius: 20px;
+
+}
+
+.boton:hover{
+  background-color: #f091fa;
+  color: #fde3ff;
 }
 
 body {
@@ -298,34 +320,39 @@ body {
 }
 
 .card-contenedor{
-  width: 300px;
+  width: 310px;
   height: auto;
   background-color: #000000;
+  padding-bottom: 24px;
+  
 }
 
 .card-contenedores{
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
+
 
 }
 
 .card-body-mio{
-  padding: 30px;
-  background-color: #2a012e;
+  padding: 40px;
+  background-color: #1d031f;
   border: #232425;
+
 }
 
 .sobre-nosotros{
   display: flex;
   justify-content: center;
   padding: 40px;
-  width: 1350px;
+  padding-bottom: 15px;
+  width: 1200px;
   height: auto;
 }
 
 .sobre-nosotros img {
-  height: 520px;
+  height: 400px;
   width: auto;
   padding: 60px;
 }

@@ -52,7 +52,7 @@ public class BD{
         Negocio sede = new Negocio();
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM Negocio WHERE IdNegocio = @pid";
-            sede = db.QueryFirstOrDefault<Negocio>(sql, new {pid= sede});
+            sede = db.QueryFirstOrDefault<Negocio>(sql, new {pid= id});
         }
         return sede;
     }

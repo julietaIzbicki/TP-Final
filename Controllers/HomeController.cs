@@ -52,13 +52,18 @@ public class HomeController : Controller
         return res;
     }
 
-[HttpGet]
+    [HttpGet]
     public int EliminarReserva(string mail)
     {
         BD.ElmiminarReserva(mail);
         return 0;
     }
 
+    [HttpGet]
+    public int Likeando()
+    {
+        return 0;
+    }
 
     public IActionResult Contacto()
     {
@@ -68,7 +73,6 @@ public class HomeController : Controller
 
     public IActionResult ReservaConfirmada()
     {
-        
         return View();
     }
 

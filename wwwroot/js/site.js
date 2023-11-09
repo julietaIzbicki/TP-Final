@@ -34,3 +34,17 @@ $(document).ready(function() {
         window.location.href = '/Home/ReservaConfirmada';
     });
 });
+
+
+function Likear()
+{
+    $.ajax({
+        url: '/Home/Likeando',
+        type : 'GET',
+
+        success: function(like) {             
+            
+        }
+    });
+
+}

@@ -1,10 +1,10 @@
 public class Personal{
-    public int IdPersonal; 
-    public int IdNegocio;
-    public string Nombre;
-    public int Edad;
-    public int Telefono;
-    public string Genero;
+    public int IdPersonal {get; set;}
+    public int IdNegocio {get; set;}
+    public string Nombre {get; set;}
+    public int Edad {get; set;}
+    public int Telefono {get; set;}
+    public string Genero {get; set;}
 
     public Personal(){}
 

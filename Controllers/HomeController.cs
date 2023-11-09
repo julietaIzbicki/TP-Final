@@ -34,6 +34,8 @@ public class HomeController : Controller
     
     public IActionResult Lugar(int id)
     {
+        Console.WriteLine(id);
+
         ViewBag.UnLugar = BD.InfoSede(id);
         return View();
     }

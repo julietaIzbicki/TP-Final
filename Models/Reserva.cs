@@ -1,12 +1,12 @@
 public class Reserva{
-    public int IdReserva; 
-    public string Nombre;
-    public string Apellido;
-    public string Mail;
-    public int Edad;
-    public int IdPiercing;
-    public int IdNegocio;
-    public DateTime Fecha;
+    public int IdReserva {get; set;}
+    public string Nombre {get; set;}
+    public string Apellido {get; set;}
+    public string Mail {get; set;}
+    public int Edad {get; set;}
+    public int IdPiercing {get; set;}
+    public int IdNegocio {get; set;}
+    public DateTime Fecha {get; set;}
 
     public Reserva(){}
 

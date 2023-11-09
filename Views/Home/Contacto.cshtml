@@ -18,19 +18,17 @@
     <h1>Nuestras sedes</h1>
 
     <div class="card-contenedores">
-     @{
-                    foreach(Negocio sede in @ViewBag.Lugares){
-                        <div class="card-contenedor">
-                            <div  style="width: 18rem;">
-                                    <div class="card-body-mio">
-                                        <h3>@sede.Nombre</h3>
-                                        <h5>@sede.Direccion</h5>
-                                        <a class="boton" href='@Url.Action("Lugar", "Home", new {idNegocio = sede.IdNegocio})'>Más información</a>
-                                    </div>
-                                </div>
-                        </div>
-                        }
-                        }
+    @{foreach(Negocio sede in @ViewBag.Lugares){
+        <div class="card-contenedor">
+            <div  style="width: 18rem;">
+                <div class="card-body-mio">
+                    <h3>@sede.Nombre</h3>
+                    <h5>@sede.Direccion</h5>
+                    <a class="boton" href='@Url.Action("Lugar", "Home", new {id = @sede.IdNegocio})'>Más información</a>
+                </div>
+            </div>
+        </div>
+    }
+    }
     </div>
-    
 </div>

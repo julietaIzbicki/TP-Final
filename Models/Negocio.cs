@@ -1,11 +1,11 @@
 public class Negocio{
-    public int IdNegocio;
-    public string Nombre;
-    public string Horarios;
-    public string Direccion;
-    public string Foto;
-    public int Telefono;
-    public string Mapa;
+    public int IdNegocio {get; set;}
+    public string Nombre {get; set;}
+    public string Horarios {get; set;}
+    public string Direccion {get; set;}
+    public string Foto {get; set;}
+    public int Telefono {get; set;}
+    public string Mapa {get; set;}
     
 
     public Negocio(){}

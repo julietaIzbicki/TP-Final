@@ -1,11 +1,11 @@
 public class Piercing{
-    public int IdPiercing; 
-    public int Precio;
-    public string Material;
-    public string Color;
-    public string Foto;
-    public string Nombre;
-    public int Likes;
+    public int IdPiercing {get; set;}
+    public int Precio {get; set;}
+    public string Material {get; set;}
+    public string Color {get; set;}
+    public string Foto {get; set;}
+    public string Nombre {get; set;}
+    public int Likes {get; set;}
 
     public Piercing(){}
 

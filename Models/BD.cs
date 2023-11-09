@@ -23,16 +23,23 @@ public class BD{
             return db.Query<Piercing>(sql).ToList();
         }
     }
-       public static List<Piercing> ListarDeTitanio(){
+    
+    public static List<Piercing> ListarDeTitanio(){
         string sql = "SELECT * FROM Piercing WHERE Material='Titanio'";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             return db.Query<Piercing>(sql).ToList();
         }
     }
-//hay que pasar estos en controllers
+
+    public static void AgregarLikes(int id){
+        string sql = "UPDATE Piercing SET Likes = Likes + 1 WHERE IdPiercing = @pid";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            db.QueryFirstOrDefault<Piercing>(sql, new {pid= id});
+        }
+    }
 
 //devuelve un objeto solo 
-     public static Piercing InfoPiercing(int id){
+    public static Piercing InfoPiercing(int id){
         Piercing pi = new Piercing();
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM Piercing WHERE IdPiercing = @pid";

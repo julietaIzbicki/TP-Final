@@ -60,9 +60,10 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public int Likeando()
+    public int Likeando(int id)
     {
-        return 0;
+        BD.AgregarLikes(id);
+        return 0; 
     }
 
     public IActionResult Contacto()

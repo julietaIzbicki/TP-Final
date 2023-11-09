@@ -36,11 +36,12 @@ $(document).ready(function() {
 });
 
 
-function Likear()
+function Likear(id)
 {
     $.ajax({
         url: '/Home/Likeando',
         type : 'GET',
+        data: {id},
 
         success: function(like) {             
             

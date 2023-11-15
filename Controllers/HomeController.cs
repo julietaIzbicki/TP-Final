@@ -38,6 +38,12 @@ public class HomeController : Controller
         return View();
     }
     
+    public IActionResult Personal(int id)
+    {
+        ViewBag.Personal = BD.ListarPersonal(id);
+        return View();
+    }
+
     public IActionResult Reserva()
     {
         ViewBag.Aros = BD.ListarPiercings();

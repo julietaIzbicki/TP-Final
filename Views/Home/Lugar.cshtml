@@ -1,18 +1,6 @@
 @{
     ViewData["Title"] = "";
 }
-
-    <div class="sobre-nosotros">
-    
-        <img src="/imagenes/imagen-contacto.jpg" alt="Oreja con piercings">
-        <div>
-            <h1>Sobre nosotros</h1>
-            <p>
-                Adorn-Me una empresa de piercings creada en 2023 por un grupo de jóvenes profesionales con una pasión por el piercing seguro y de alta calidad. La idea de crear Piercings Clean surgió de la experiencia personal de uno de nuestros fundadores, quien sufrió una infección grave tras hacerse un piercing en un estudio de mala calidad. Este incidente le inspiró a crear una empresa que ofreciera perforaciones seguras y limpias, utilizando los mejores materiales y técnicas disponibles. Nuestro objetivo es ofrecer a nuestros clientes la mejor experiencia posible en el piercing. 
-            </p>
-        </div>
-    </div>
-    
     
 <div class="text-center">
     <h1>Nuestras sedes</h1>
@@ -22,10 +10,14 @@
             <div  style="width: 18rem;">
                 <div class="card-body-mio">
                     <h3>@ViewBag.UnLugar.Nombre</h3>
-                    <h5>@ViewBag.UnLugar.Direccion</h5>
-                    <h5>@ViewBag.UnLugar.Horarios</h5>
-                    <h5>@ViewBag.UnLugar.Telefono</h5>
-                    <!-- FOTO Y MAPA -->
+                    <h5>Dirección: @ViewBag.UnLugar.Direccion</h5>
+                    <h5>Horarios: @ViewBag.UnLugar.Horarios</h5>
+                    <h5>Telefono: @ViewBag.UnLugar.Telefono</h5>
+                    <img src="@ViewBag.UnLugar.Foto" class="d-block w-100" alt="...">
+                    <!-- MAPA -->
+
+                    <a class="boton" href='@Url.Action("Personal", "Home", new {id = @ViewBag.UnLugar.IdNegocio})'> Ver personal</a>
+
                 </div>
             </div>
         </div>

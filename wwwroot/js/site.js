@@ -1,4 +1,43 @@
-﻿function EliminarReserva()
+﻿//**********************************************   JS   **********************************************/
+
+$(document).ready(function() {
+    $('#confirmarReservaBtn').click(function() {
+        window.location.href = '/Home/ReservaConfirmada';
+    });
+});
+
+
+
+document.getElementById("Edad").addEventListener('keyup', (event) => {
+
+    const edad = document.getElementById("Edad").value;
+    let ok2 = false;
+
+    if (edad > 16) {
+        Edad.style.background = "green";        
+        ok2 = true;
+    } else {
+        Edad.style.background = "red";        
+    }
+});
+
+//**********************************************   AJAX   **********************************************/
+
+function Likear(id)
+{
+    $.ajax({
+        url: '/Home/Likeando',
+        type : 'GET',
+        data: {id},
+
+        success: function(like) {             
+            const likesElement = document.getElementById(id);
+            likesElement.innerText = parseInt(likesElement.innerText) + 1;
+        }
+    });
+}
+
+function EliminarReserva()
 {
     mail=$("#Mail").val();
     $.ajax({
@@ -12,7 +51,6 @@
     });
 }
 
-
 function EnviarFormulario()
 {
     $.ajax({
@@ -21,30 +59,7 @@ function EnviarFormulario()
         data: $("#formulario").serialize(),
         dataType: 'json',  
 
-        success: function(confirmar) {             
-            /// $("#texto_informacion").html($("#formulario").serialize());    
-            /// mostrar el resultado del form lindo
-        }
+        success: function(confirmar) {}
     });
 
-}
-
-$(document).ready(function() {
-    $('#confirmarReservaBtn').click(function() {
-        window.location.href = '/Home/ReservaConfirmada';
-    });
-});
-
-
-function Likear(id)
-{
-    $.ajax({
-        url: '/Home/Likeando',
-        type : 'GET',
-        data: {id},
-
-        success: function(like) {             
-            window.location.reload();
-        }
-    });
 }

@@ -331,6 +331,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 30px;
+  flex-wrap: wrap;
 
 
 }
@@ -357,87 +358,131 @@ body {
   padding: 60px;
 }
 
-button {
+
+
+.card-catalogo{
+  padding: 20px;
+  max-width: 33.33%;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-catalogo img{
+  width: auto;
+  height: auto;
+  max-height: 300px;
+  max-width: 300px;
+
+
+}
+
+
+
+/* BOTON DE LIKES */
+
+.heart-container {
+  --heart-color: rgb(255, 91, 239);
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+  background-color: #000000;
+  position: absolute;
+  left: 40px;
+  bottom: 20px;
+}
+
+.heart-container .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.heart-container .svg-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 25px 20px 22px;
-  box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  background-color: #e8e8e8;
-  border-color: #ffe2e2;
-  border-style: solid;
-  border-width: 9px;
-  border-radius: 35px;
-  font-size: 25px;
-  font-weight: 900;
-  color: rgb(134, 124, 124);
-  font-family: monospace;
-  transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
-  border-color 400ms ease-in-out,
-  background-color 400ms ease-in-out;
-  word-spacing: -2px;
+  
 }
 
-@keyframes movingBorders {
+.heart-container .svg-outline,
+        .heart-container .svg-filled {
+  fill: var(--heart-color);
+  position: absolute;
+  
+}
+
+.heart-container .svg-filled {
+  animation: keyframes-svg-filled 1s;
+  display: none;
+  
+}
+
+.heart-container .svg-celebrate {
+  position: absolute;
+  animation: keyframes-svg-celebrate .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+  
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-filled {
+  display: block
+  
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-celebrate {
+  display: block
+  
+}
+
+@keyframes keyframes-svg-filled {
   0% {
-    border-color: #fce4e4;
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
   }
 
   50% {
-    border-color: #ffd8d8;
-  }
-
-  90% {
-    border-color: #fce4e4;
+    transform: scale(1);
+    filter: brightness(1.5);
   }
 }
 
-button:hover {
-  background-color: #eee;
-  transform: scale(105%);
-  animation: movingBorders 3s infinite;
-}
-
-button svg {
-  margin-right: 11px;
-  fill: rgb(255, 110, 110);
-  transition: opacity 100ms ease-in-out;
-}
-
-.filled {
-  position: absolute;
-  opacity: 0;
-  top: 20px;
-  left: 22px;
-}
-
-@keyframes beatingHeart {
+@keyframes keyframes-svg-celebrate {
   0% {
-    transform: scale(1);
+    transform: scale(0);
   }
 
-  15% {
-    transform: scale(1.15);
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
   }
 
-  30% {
-    transform: scale(1);
-  }
-
-  45% {
-    transform: scale(1.15);
-  }
-
-  60% {
-    transform: scale(1);
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
   }
 }
 
-button:hover .empty {
-  opacity: 0;
-}
-
-button:hover .filled {
-  opacity: 1;
-  animation: beatingHeart 1.2s infinite;
+button{
+  background-color: #000000;
+  border-radius: 0%;
 }

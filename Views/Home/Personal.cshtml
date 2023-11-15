@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="text-center">
+    <h1>Nuestro personal</h1>
+    <div class="card-contenedores">
+        @{foreach(Personal pers in @ViewBag.Personal){
+            <div class="card-contenedor">
+                <div  style="width: 18rem;">
+                    <div class="card-body-mio">
+                        <h3>@pers.Nombre</h3>
+                        <h5>Edad: @pers.Edad</h5>
+                        <h5>Genero: @pers.Genero</h5>
+                        <h5>Telefono: @pers.Telefono</h5>
+                        <a class="boton" href='@Url.Action("Reserva", "Home")'> Reserva con @pers.Nombre</a>
+                    </div>
+                </div>
+            </div>
+        }}
+    </div>
+</div>

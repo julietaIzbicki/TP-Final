@@ -3,7 +3,7 @@ using Dapper;
 public class BD{
     private static string _connectionString = @"Server=localhost; DataBase=TPFinal - Prog;Trusted_Connection=True;";
     
-     public static List<Negocio> ListarNegocios(){
+    public static List<Negocio> ListarNegocios(){
         string sql = "SELECT * FROM Negocio";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             return db.Query<Negocio>(sql).ToList();
@@ -74,6 +74,13 @@ public class BD{
         using (SqlConnection db = new SqlConnection(_connectionString)) 
         {
             db.Execute(SQL, new { mail });
+        }
+    }
+
+    public static List<Personal> ListarPersonal(int id){
+        string sql = "SELECT * FROM Personal WHERE IdNegocio = @pid";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            return db.Query<Personal>(sql, new {pid= id}).ToList();
         }
     }
 

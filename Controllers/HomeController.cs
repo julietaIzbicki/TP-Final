@@ -43,7 +43,7 @@ public class HomeController : Controller
         ViewBag.Personal = BD.ListarPersonal(id);
         return View();
     }
-
+    
     public IActionResult Reserva()
     {
         ViewBag.Aros = BD.ListarPiercings();

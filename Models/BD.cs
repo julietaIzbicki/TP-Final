@@ -84,4 +84,11 @@ public class BD{
         }
     }
 
+    public static List<Reserva> TraerReserva(string mail){
+        string sql = "SELECT * FROM Reservas Mail = @mail";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            return db.Query<Reserva>(sql).ToList();
+        }
+    }
+
 }

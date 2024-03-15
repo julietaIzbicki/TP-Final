@@ -95,11 +95,9 @@ public class HomeController : Controller
     }
 
 
-
-
-        public IActionResult MisReservas()
+    public IActionResult MisReservas(string mail)
     {
-       
+        ViewBag.EsaReserva = BD.TraerReserva(mail);
         return View();
     }
 }

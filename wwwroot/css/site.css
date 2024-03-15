@@ -160,9 +160,7 @@ body {
   width: 45px;
 }
 
-header li{
-  padding-right: 15px;
-}
+
 
 header li a{
   font-family: 'Tilt Neon', sans-serif;
@@ -183,12 +181,10 @@ footer li a, footer li{
   width: fit-content;
 }
 
-
-
 .vinculo-header{
   display: flex;
   justify-content: flex-end;
-  margin-left: 1270px;
+  margin-left: 1150px;
 }
 
 li a:hover{

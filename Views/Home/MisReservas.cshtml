@@ -1,8 +1,20 @@
 @{
-    ViewData["Title"] = "Reserva confirmada";
+    ViewData["Title"] = "Mis reservas";
 }
 
 <div class="text-center">
-    <h1>Hola</h1>
-    
+    <h5 class="display-4">Introducí tu mail</h5>
+    <div class="form-container">
+        <form class="form" id="formulario">
+            <div class="form-group">
+                <div class="column">
+                    <div class="input-box">
+                        <label>Mail</label>
+                        <input required placeholder="Enter mail" type="email" id="Mail" name="Mail">
+                    </div>
+                </div>
+            </div>
+            <button class="form-submit-btn" type="button" onclick="TraerReserva()">Submit</button>
+        </form>
+    </div>
 </div>

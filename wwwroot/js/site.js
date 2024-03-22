@@ -86,3 +86,11 @@ function EnviarFormulario()
     });
 
 }
+
+function TraerReserva()
+{
+    let Mail = document.getElementById("Mail").value
+    console.log(Mail)
+    window.location.href = `/Home/MisReservas2?mail=${Mail}`
+
+}

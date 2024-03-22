@@ -95,7 +95,12 @@ public class HomeController : Controller
     }
 
 
-    public IActionResult MisReservas(string mail)
+    public IActionResult MisReservas()
+    {
+        return View();
+    }
+
+    public IActionResult MisReservas2(string mail)
     {
         ViewBag.EsaReserva = BD.TraerReserva(mail);
         return View();

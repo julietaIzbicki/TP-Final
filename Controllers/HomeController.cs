@@ -59,9 +59,10 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public int EliminarReserva(string mail)
+    public int EliminarReserva(int IdReserva)
     {
-        BD.ElmiminarReserva(mail);
+        Console.WriteLine(IdReserva);
+        BD.ElmiminarReserva(IdReserva);
         return 0;
     }
 

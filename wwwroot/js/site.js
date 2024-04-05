@@ -60,13 +60,12 @@ function Likear(checkbox, id)
     }
 }
 
-function EliminarReserva()
+function EliminarReserva(IdReserva)
 {
-    mail=$("#Mail").val();
     $.ajax({
         url: '/Home/EliminarReserva',
         type : 'GET',
-        data: {mail},
+        data: {IdReserva},
         
         success: function(Eliminar) {
             window.location.href = '/Home/ReservaEliminada'        
@@ -90,7 +89,6 @@ function EnviarFormulario()
 function TraerReserva()
 {
     let Mail = document.getElementById("Mail").value
-    console.log(Mail)
     window.location.href = `/Home/MisReservas2?mail=${Mail}`
 
 }

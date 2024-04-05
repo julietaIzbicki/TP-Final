@@ -8,12 +8,13 @@
         <div class="card-contenedor">
             <div style="width: 18rem;">
                 <div class="card-body-mio">
+                    
                     <p>@reser.Nombre</p>
                     <p>@reser.Apellido</p>
                     <p>@reser.Mail</p>
                     <p>@reser.Fecha</p>
                     <div > 
-                        <a class="boton-mis-reservas" href='@Url.Action("Reserva", "Home")'>Eliminar reserva</a>
+                        <a class="boton-mis-reservas" onclick="EliminarReserva(@reser.IdReserva)">Eliminar reserva</a>
                         <a class="boton-mis-reservas" href='@Url.Action("Reserva", "Home")'>Modificar reserva</a>
                     </div>
                     

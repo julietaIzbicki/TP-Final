@@ -296,6 +296,25 @@ h5{
   text-decoration: none;
 }
 
+.boton-mis-reservas{
+  display: flex;
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  padding: 15px;
+  background-color: #e81cff;
+  color: #fde3ff;
+  font-family: 'Tilt Neon', sans-serif;
+  border-radius: 15px;
+  text-decoration: none;
+  justify-content: center;
+}
+
+a .boton-mis-reservas{
+  margin:20px;
+}
+
 .boton-index:hover{
   background-color: #f091fa;
   color: #fde3ff;
